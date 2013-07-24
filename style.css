@@ -1,0 +1,59 @@
+/* =Reply Tool Style
+----------------------------------------------- */
+
+.decode-reply-tool-plugin {
+	-webkit-transition: width 0.25s ease-out;
+	-moz-transition: width 0.25s ease-out;
+	transition: width 0.25s ease-out;
+	border-bottom: none;
+	margin: -1.5% auto 1.5%;
+	position: relative;
+	right: 10px;
+	text-align: center;
+	width: 100%;
+}
+
+.decode-reply-tool-plugin .replytrigger {
+	width: auto;
+	float: none;
+}
+
+.decode-reply-tool-plugin:hover .replytrigger, .decode-reply-tool-plugin.triggered .replytrigger {
+	opacity: 0;
+}
+
+.decode-reply-tool-plugin .replylink {
+	opacity: 0;
+}
+
+.decode-reply-tool-plugin:hover .replylink, .decode-reply-tool-plugin.triggered .replylink {
+	opacity: 1;
+}
+
+.decode-reply-tool-plugin .replylink, .decode-reply-tool-plugin .replytrigger {
+	-webkit-transition: color 0.25s ease-out, opacity 0.25s ease-in-out;
+	-moz-transition: color 0.25s ease-out, opacity 0.25s ease-in-out;
+	transition: color 0.25s ease-out, opacity 0.25s ease-in-out;
+	font-size: 1em;
+	color: #444444;
+	display: inline-block;
+}
+	.decode-reply-tool-plugin .replylink:hover {
+		color: #009BCD;
+		border-bottom: none;
+	}
+
+	.decode-reply-tool-plugin .replylink:active {
+		color: #007EA6;
+		border-bottom: none;
+	}
+
+.format-quote .decode-reply-tool-plugin {
+	font-size: 0.5em;
+}
+
+@media only screen and (min-width: 699px) {
+.decode-reply-tool-plugin {
+	right: 5px;
+}
+}
