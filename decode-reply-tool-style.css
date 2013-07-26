@@ -38,12 +38,12 @@
 	color: #444444;
 	display: inline-block;
 }
-	.decode-reply-tool-plugin .replylink:hover {
+	.blog .decode-reply-tool-plugin .replylink:hover {
 		color: #009BCD;
 		border-bottom: none;
 	}
 
-	.decode-reply-tool-plugin .replylink:active {
+	.blog .decode-reply-tool-plugin .replylink:active {
 		color: #007EA6;
 		border-bottom: none;
 	}

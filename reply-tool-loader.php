@@ -107,8 +107,8 @@ if (get_option('enable-reply-tool')==true) {
 
 	add_action( 'wp_enqueue_scripts', 'decode_reply_tool_enqueue_scripts' );
 	function decode_reply_tool_enqueue_scripts() {
-			wp_register_script( 'decode-reply-tool-script', plugins_url('script.js', __FILE__), array('jquery'), '2.3', true );
-			wp_register_style( 'decode-reply-tool-style', plugins_url('style.css', __FILE__) );
+			wp_register_script( 'decode-reply-tool-script', plugins_url('decode-reply-tool-script.js', __FILE__), array('jquery'), '2.3', true );
+			wp_register_style( 'decode-reply-tool-style', plugins_url('decode-reply-tool-style.css', __FILE__) );
 			
 			wp_enqueue_script( 'decode-reply-tool-script' );
 			wp_enqueue_style( 'decode-reply-tool-style' );
