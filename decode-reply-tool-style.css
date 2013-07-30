@@ -38,14 +38,14 @@
 	color: #444444;
 	display: inline-block;
 }
-	.blog .decode-reply-tool-plugin .replylink:hover {
+	.decode-reply-tool-plugin .replylink:hover {
 		color: #009BCD;
-		border-bottom: none;
+		border-bottom: none !important;
 	}
 
-	.blog .decode-reply-tool-plugin .replylink:active {
+	.decode-reply-tool-plugin .replylink:active {
 		color: #007EA6;
-		border-bottom: none;
+		border-bottom: none !important;
 	}
 
 .format-quote .decode-reply-tool-plugin {

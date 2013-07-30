@@ -4,7 +4,7 @@ Donate link:
 Tags: reply, Decode, discussion, social, twitter, app.net, adn, simple, minimal
 Requires at least: 2.7
 Tested up to: 3.6-RC2
-Stable tag: 1.0
+Stable tag: 1.0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -34,6 +34,8 @@ Not at all! Decode is as simple as can be; you never need to look at a bit of co
 == Screenshots ==
 
 1. The Reply Tool as it appears when using the theme, Decode.
+
+2. The Reply Tool after being activated by drawing the cursor near or tapping on the "Reply" text.
 
 == Changelog ==
 
