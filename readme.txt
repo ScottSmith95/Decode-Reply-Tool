@@ -41,3 +41,6 @@ Not at all! Decode is as simple as can be; you never need to look at a bit of co
 
 = 1.0 =
 * The original version
+
+= 1.0.1 =
+* Updated CSS to be more compatible with the latest versions of Decode.
