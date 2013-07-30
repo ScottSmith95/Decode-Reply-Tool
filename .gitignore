@@ -3,3 +3,7 @@
 *.zip
 
 Instructions/*
+
+SVN/*
+
+decode-reply-tool/*
