@@ -3,7 +3,7 @@
 Plugin Name: Decode Reply Tool
 Plugin URI: http://ScottHSmith.com/projects/decode
 Description: The perfect compliment to the Decode theme, this plugin allows your readership to reply to your posts via Twitter and App.net using a beautiful, simple reply tool placed on above or below your posts.
-Version: 1.0.2
+Version: 1.0.3
 Author: Scott Smith
 Author URI: http://ScottHSmith.com/
 License: GPL3
@@ -84,32 +84,42 @@ function decode_reply_tool_options_page() {
 }
 
 
-if (get_option('enable-reply-tool')==true) {
-	add_filter('the_content', 'insert_decode_reply_tool');
-	function insert_decode_reply_tool($content) {
+if ( get_option( 'enable-reply-tool' )==true ) {
+	
+	//Add Reply Tool to post content
+	add_filter( 'the_content', 'insert_decode_reply_tool' );
+	remove_filter( 'the_excerpt', 'insert_decode_reply_tool' );
+	function insert_decode_reply_tool( $content ) {
 
 		ob_start();
 		include 'reply-tool-insert.php';
 		$reply_tool = ob_get_clean();
 
-		if(is_home() && is_main_query() && !has_post_format('quote') && !has_post_format('aside') || is_single() && is_main_query() && !has_post_format('quote') && !has_post_format('aside')) {
-			$content = $reply_tool .$content;
+		if( is_home() && is_main_query() && !has_post_format('quote') && !has_post_format('aside') || is_single() && is_main_query() && !has_post_format('quote') && !has_post_format('aside') ) {
+			$content = $reply_tool . $content;
 		}
-		elseif(has_post_format('quote') && is_home() && is_main_query() || has_post_format('aside') && is_home() && is_main_query()) {
+		elseif( has_post_format('quote') && is_home() && is_main_query() || has_post_format('aside') && is_home() && is_main_query() || has_excerpt() ) {
 			$content = $content;
 		}
-		elseif(has_post_format('quote') && is_single() || has_post_format('aside') && is_single()) {
+		elseif( has_post_format('quote') && is_single() || has_post_format('aside') && is_single() ) {
 			$content = $content . $reply_tool;
 		}
 		return $content;
 	}
+	add_filter('get_the_excerpt', 'remove_decode_reply_tool', 5);
 
+	//Remove Reply Tool text from post excerpts
+	function remove_decode_reply_tool( $content ){
+	   remove_filter('the_content', 'insert_decode_reply_tool');
+	   return $content;
+	}
 
+	//Enqueue necessary scripts and styles
 	add_action( 'wp_enqueue_scripts', 'decode_reply_tool_enqueue_scripts' );
 	function decode_reply_tool_enqueue_scripts() {
 			wp_register_script( 'decode-reply-tool-script', plugins_url('decode-reply-tool-script.js', __FILE__), array('jquery'), '1.0.2', true );
 			wp_register_style( 'decode-reply-tool-style', plugins_url('decode-reply-tool-style.css', __FILE__), array(), '1.0.2');
-			
+
 			wp_enqueue_script( 'decode-reply-tool-script' );
 			wp_enqueue_style( 'decode-reply-tool-style' );
 	}
