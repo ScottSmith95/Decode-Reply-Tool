@@ -39,13 +39,13 @@ Not at all! Decode is as simple as can be; you never need to look at a bit of co
 
 == Changelog ==
 
-= 1.0 =
-* The original version
-
-= 1.0.1 =
-* Updated CSS to be more compatible with the latest versions of Decode.
+= 1.0.3 =
+* Removed Reply Tool text from post excerpts
 
 = 1.0.2 =
 * New, cool transition on activation
 * Improved spacing with post
 * Works better with Decode 2.5 and up
+
+= 1.0.1 =
+* Updated CSS to be more compatible with the latest versions of Decode.
