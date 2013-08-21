@@ -6,12 +6,19 @@
 	-moz-transition: width 0.25s ease-out;
 	transition: width 0.25s ease-out;
 	border-bottom: none;
-	margin: -2.5% auto 3.5%;
 	position: relative;
 	right: 5px;
 	text-align: center;
 	width: 100%;
 	z-index: 1;
+}
+
+.decode-reply-tool-plugin:first-child {
+	margin: -2.5% auto 3.5%;
+}
+
+.decode-reply-tool-plugin:last-child {
+	margin: 3.5% auto;
 }
 
 .decode-reply-tool-plugin .replytrigger {

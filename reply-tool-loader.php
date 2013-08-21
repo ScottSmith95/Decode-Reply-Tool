@@ -3,7 +3,7 @@
 Plugin Name: Decode Reply Tool
 Plugin URI: http://ScottHSmith.com/projects/decode
 Description: The perfect compliment to the Decode theme, this plugin allows your readership to reply to your posts via Twitter and App.net using a beautiful, simple reply tool placed on above or below your posts.
-Version: 1.0.3
+Version: 1.1
 Author: Scott Smith
 Author URI: http://ScottHSmith.com/
 License: GPL3
@@ -32,15 +32,20 @@ function decode_reply_tool_options() {
 add_action( 'admin_init', 'decode_reply_tool_init' );
 function decode_reply_tool_init() {
 	register_setting( 'decode-reply-tool-settings-group', 'enable-reply-tool' );
+	register_setting( 'decode-reply-tool-settings-group', 'display-above-posts' );
+	register_setting( 'decode-reply-tool-settings-group', 'display-below-posts' );
 	register_setting( 'decode-reply-tool-settings-group', 'twitter-username' );
 	register_setting( 'decode-reply-tool-settings-group', 'adn-username' );
 
 	// Sections
 	add_settings_section( 'enable-section', 'Enable/Disable', 'decode_reply_tool_enable_section_callback', 'decode_reply_tool' );
+	add_settings_section( 'display-section', 'Display', 'decode_reply_tool_display_section_callback', 'decode_reply_tool' );
 	add_settings_section( 'usernames-section', 'Usernames', 'decode_reply_tool_usernames_section_callback', 'decode_reply_tool' );
 
 	//Fields
 	add_settings_field( 'enable-reply-tool', 'Enable Reply Tool', 'decode_reply_tool_enable_reply_tool_callback', 'decode_reply_tool', 'enable-section' );
+	add_settings_field( 'display-above-posts', 'Display Above Posts', 'decode_reply_tool_display_above_posts_callback', 'decode_reply_tool', 'display-section' );
+	add_settings_field( 'display-below-posts', 'Display Below Posts', 'decode_reply_tool_display_below_posts_callback', 'decode_reply_tool', 'display-section' );
 	add_settings_field( 'twitter-username', 'Twitter Username', 'decode_reply_tool_twitter_username_callback', 'decode_reply_tool', 'usernames-section' );
 	add_settings_field( 'adn-username', 'App.net Username', 'decode_reply_tool_adn_username_callback', 'decode_reply_tool', 'usernames-section' );
 }
@@ -49,14 +54,28 @@ function decode_reply_tool_enable_section_callback() {
     echo 'Do you want to enable or disable the reply tool on your site?';
 }
 
+function decode_reply_tool_display_section_callback() {
+    echo 'Choose how the reply tool is displayed on your site:';
+}
+
 function decode_reply_tool_usernames_section_callback() {
-    echo 'Enter the usernames you want to be @mentioned to for replies.';
+    echo 'Enter the usernames you want to be @mentioned to for replies:';
 }
 
 
 function decode_reply_tool_enable_reply_tool_callback() {
     echo '<input name="enable-reply-tool" id="enable-reply-tool" type="checkbox" value="1" class="code" '
     . checked( 1, get_option('enable-reply-tool'), false ) . ' />';
+}
+
+function decode_reply_tool_display_above_posts_callback() {
+    echo '<input name="display-above-posts" id="display-above-posts" type="checkbox" value="1" class="code" '
+    . checked( 1, get_option('display-above-posts'), false ) . ' />';
+}
+
+function decode_reply_tool_display_below_posts_callback() {
+    echo '<input name="display-below-posts" id="display-below-posts" type="checkbox" value="1" class="code" '
+    . checked( 1, get_option('display-below-posts'), false ) . ' />';
 }
 
 function decode_reply_tool_twitter_username_callback() {
@@ -84,7 +103,7 @@ function decode_reply_tool_options_page() {
 }
 
 
-if ( get_option( 'enable-reply-tool' )==true ) {
+if ( get_option( 'enable-reply-tool' ) == true ) {
 	
 	//Add Reply Tool to post content
 	add_filter( 'the_content', 'insert_decode_reply_tool' );
@@ -96,7 +115,12 @@ if ( get_option( 'enable-reply-tool' )==true ) {
 		$reply_tool = ob_get_clean();
 
 		if( is_home() && is_main_query() && !has_post_format('quote') && !has_post_format('aside') || is_single() && is_main_query() && !has_post_format('quote') && !has_post_format('aside') ) {
-			$content = $reply_tool . $content;
+			if( get_option( 'display-above-posts' ) == true ) {
+				$content = $reply_tool . $content;
+			}
+			if( get_option( 'display-below-posts' ) == true ) {
+				$content = $content . $reply_tool;
+			}
 		}
 		elseif( has_post_format('quote') && is_home() && is_main_query() || has_post_format('aside') && is_home() && is_main_query() || has_excerpt() ) {
 			$content = $content;
