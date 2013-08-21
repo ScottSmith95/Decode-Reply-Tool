@@ -39,6 +39,9 @@ Not at all! Decode is as simple as can be; you never need to look at a bit of co
 
 == Changelog ==
 
+= 1.1 =
+* Added options to display reply tool above or below posts. (Quotes and asides are excluded, those display at bottom anyway)
+
 = 1.0.3 =
 * Removed Reply Tool text from post excerpts
 
@@ -46,6 +49,3 @@ Not at all! Decode is as simple as can be; you never need to look at a bit of co
 * New, cool transition on activation
 * Improved spacing with post
 * Works better with Decode 2.5 and up
-
-= 1.0.1 =
-* Updated CSS to be more compatible with the latest versions of Decode.
