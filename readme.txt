@@ -4,7 +4,7 @@ Donate link:
 Tags: reply, Decode, discussion, social, twitter, app.net, adn, simple, minimal
 Requires at least: 2.7
 Tested up to: 3.6
-Stable tag: 1.1
+Stable tag: 1.1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -38,6 +38,9 @@ Not at all! Decode is as simple as can be; you never need to look at a bit of co
 2. The Reply Tool after being activated by drawing the cursor near or tapping on the "Reply" text.
 
 == Changelog ==
+
+= 1.1.1 =
+* Fixed not showing reply tool by default on update
 
 = 1.1 =
 * Added options to display reply tool above or below posts. (Quotes and asides are excluded, those display at bottom anyway)

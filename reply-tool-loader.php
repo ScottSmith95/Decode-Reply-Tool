@@ -3,7 +3,7 @@
 Plugin Name: Decode Reply Tool
 Plugin URI: http://ScottHSmith.com/projects/decode
 Description: The perfect compliment to the Decode theme, this plugin allows your readership to reply to your posts via Twitter and App.net using a beautiful, simple reply tool placed on above or below your posts.
-Version: 1.1
+Version: 1.1.1
 Author: Scott Smith
 Author URI: http://ScottHSmith.com/
 License: GPL3
@@ -70,12 +70,12 @@ function decode_reply_tool_enable_reply_tool_callback() {
 
 function decode_reply_tool_display_above_posts_callback() {
     echo '<input name="display-above-posts" id="display-above-posts" type="checkbox" value="1" class="code" '
-    . checked( 1, get_option('display-above-posts'), false ) . ' />';
+    . checked( 1, get_option('display-above-posts', true), false ) . ' />';
 }
 
 function decode_reply_tool_display_below_posts_callback() {
     echo '<input name="display-below-posts" id="display-below-posts" type="checkbox" value="1" class="code" '
-    . checked( 1, get_option('display-below-posts'), false ) . ' />';
+    . checked( 1, get_option('display-below-posts', false), false ) . ' />';
 }
 
 function decode_reply_tool_twitter_username_callback() {
@@ -115,10 +115,10 @@ if ( get_option( 'enable-reply-tool' ) == true ) {
 		$reply_tool = ob_get_clean();
 
 		if( is_home() && is_main_query() && !has_post_format('quote') && !has_post_format('aside') || is_single() && is_main_query() && !has_post_format('quote') && !has_post_format('aside') ) {
-			if( get_option( 'display-above-posts' ) == true ) {
+			if( get_option( 'display-above-posts', true ) == true ) {
 				$content = $reply_tool . $content;
 			}
-			if( get_option( 'display-below-posts' ) == true ) {
+			if( get_option( 'display-below-posts', false ) == true ) {
 				$content = $content . $reply_tool;
 			}
 		}
