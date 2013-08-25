@@ -41,6 +41,7 @@ Not at all! Decode is as simple as can be; you never need to look at a bit of co
 
 = 1.1.2 =
 * Compatibility with IE 5-8
+* Now ready for localization
 
 = 1.1.1 =
 * Fixed not showing reply tool by default on update

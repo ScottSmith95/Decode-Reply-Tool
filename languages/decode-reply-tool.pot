@@ -1,0 +1,79 @@
+# LANGUAGE (LOCALE) translation for WordPress.
+# This file is distributed under the same license as the WordPress package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Decode Reply Tool v1.1.2\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/support/theme/decode\n"
+"POT-Creation-Date: 2013-08-24\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2013-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+#: reply-tool-loader.php:28
+msgid "Decode Reply Tool"
+msgstr ""
+
+#: reply-tool-loader.php:41
+msgid "Enable/Disable"
+msgstr ""
+
+#: reply-tool-loader.php:42
+msgid "Display"
+msgstr ""
+
+#: reply-tool-loader.php:43
+msgid "Usernames"
+msgstr ""
+
+#: reply-tool-loader.php:46
+msgid "Enable Reply Tool"
+msgstr ""
+
+#: reply-tool-loader.php:47
+msgid "Display Above Posts"
+msgstr ""
+
+#: reply-tool-loader.php:48
+msgid "Display Below Posts"
+msgstr ""
+
+#: reply-tool-loader.php:49
+msgid "Twitter Username"
+msgstr ""
+
+#: reply-tool-loader.php:50
+msgid "App.net Username"
+msgstr ""
+
+#: reply-tool-loader.php:54
+msgid "Do you want to enable or disable the reply tool on your site?"
+msgstr ""
+
+#: reply-tool-loader.php:58
+msgid "Choose how the reply tool is displayed on your site:"
+msgstr ""
+
+#: reply-tool-loader.php:62
+msgid "Enter the usernames you want to be @mentioned to for replies:"
+msgstr ""
+
+#: reply-tool-loader.php:95
+msgid "Decode Reply Tool Options"
+msgstr ""
+
+#: reply-tool-insert.php:3
+msgid "With Twitter"
+msgstr ""
+
+#: reply-tool-insert.php:5
+msgid "Reply"
+msgstr ""
+
+#: reply-tool-insert.php:7
+msgid "With ADN"
+msgstr ""

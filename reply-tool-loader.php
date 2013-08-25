@@ -25,7 +25,7 @@ License: GPL3
 
 add_action( 'admin_menu', 'decode_reply_tool_options' );
 function decode_reply_tool_options() {
-    add_theme_page( 'Decode Reply Tool', 'Decode Reply Tool', 'manage_options', 'decode_reply_tool', 'decode_reply_tool_options_page' );
+    add_theme_page( __( 'Decode Reply Tool', 'decode-reply-tool' ), __( 'Decode Reply Tool', 'decode-reply-tool' ), 'manage_options', 'decode_reply_tool', 'decode_reply_tool_options_page' );
 }
 
 
@@ -38,28 +38,28 @@ function decode_reply_tool_init() {
 	register_setting( 'decode-reply-tool-settings-group', 'adn-username' );
 
 	// Sections
-	add_settings_section( 'enable-section', 'Enable/Disable', 'decode_reply_tool_enable_section_callback', 'decode_reply_tool' );
-	add_settings_section( 'display-section', 'Display', 'decode_reply_tool_display_section_callback', 'decode_reply_tool' );
-	add_settings_section( 'usernames-section', 'Usernames', 'decode_reply_tool_usernames_section_callback', 'decode_reply_tool' );
+	add_settings_section( 'enable-section', __( 'Enable/Disable', 'decode-reply-tool' ), 'decode_reply_tool_enable_section_callback', 'decode_reply_tool' );
+	add_settings_section( 'display-section', __( 'Display', 'decode-reply-tool' ), 'decode_reply_tool_display_section_callback', 'decode_reply_tool' );
+	add_settings_section( 'usernames-section', __( 'Usernames', 'decode-reply-tool' ), 'decode_reply_tool_usernames_section_callback', 'decode_reply_tool' );
 
 	//Fields
-	add_settings_field( 'enable-reply-tool', 'Enable Reply Tool', 'decode_reply_tool_enable_reply_tool_callback', 'decode_reply_tool', 'enable-section' );
-	add_settings_field( 'display-above-posts', 'Display Above Posts', 'decode_reply_tool_display_above_posts_callback', 'decode_reply_tool', 'display-section' );
-	add_settings_field( 'display-below-posts', 'Display Below Posts', 'decode_reply_tool_display_below_posts_callback', 'decode_reply_tool', 'display-section' );
-	add_settings_field( 'twitter-username', 'Twitter Username', 'decode_reply_tool_twitter_username_callback', 'decode_reply_tool', 'usernames-section' );
-	add_settings_field( 'adn-username', 'App.net Username', 'decode_reply_tool_adn_username_callback', 'decode_reply_tool', 'usernames-section' );
+	add_settings_field( 'enable-reply-tool', __( 'Enable Reply Tool', 'decode-reply-tool' ), 'decode_reply_tool_enable_reply_tool_callback', 'decode_reply_tool', 'enable-section' );
+	add_settings_field( 'display-above-posts', __( 'Display Above Posts', 'decode-reply-tool' ), 'decode_reply_tool_display_above_posts_callback', 'decode_reply_tool', 'display-section' );
+	add_settings_field( 'display-below-posts', __( 'Display Below Posts', 'decode-reply-tool' ), 'decode_reply_tool_display_below_posts_callback', 'decode_reply_tool', 'display-section' );
+	add_settings_field( 'twitter-username', __( 'Twitter Username', 'decode-reply-tool' ), 'decode_reply_tool_twitter_username_callback', 'decode_reply_tool', 'usernames-section' );
+	add_settings_field( 'adn-username', __( 'App.net Username', 'decode-reply-tool' ), 'decode_reply_tool_adn_username_callback', 'decode_reply_tool', 'usernames-section' );
 }
 
 function decode_reply_tool_enable_section_callback() {
-    echo 'Do you want to enable or disable the reply tool on your site?';
+    echo __( 'Do you want to enable or disable the reply tool on your site?', 'decode-reply-tool' );
 }
 
 function decode_reply_tool_display_section_callback() {
-    echo 'Choose how the reply tool is displayed on your site:';
+    echo __( 'Choose how the reply tool is displayed on your site:', 'decode-reply-tool' );
 }
 
 function decode_reply_tool_usernames_section_callback() {
-    echo 'Enter the usernames you want to be @mentioned to for replies:';
+    echo __( 'Enter the usernames you want to be @mentioned to for replies:', 'decode-reply-tool' );
 }
 
 
@@ -92,7 +92,7 @@ function decode_reply_tool_adn_username_callback() {
 function decode_reply_tool_options_page() {
     ?>
     <div class="wrap">
-        <h2>Decode Reply Tool Options</h2>
+        <h2><?php _e( 'Decode Reply Tool Options', 'decode-reply-tool'); ?></h2>
         <form action="options.php" method="POST">
             <?php settings_fields( 'decode-reply-tool-settings-group' ); ?>
             <?php do_settings_sections( 'decode_reply_tool' ); ?>
@@ -100,6 +100,11 @@ function decode_reply_tool_options_page() {
         </form>
     </div>
     <?php
+}
+
+add_action( 'init', 'decode_reply_tool_setup' );
+function decode_reply_tool_setup() {
+    load_plugin_textdomain('decode-reply-tool', false, dirname(plugin_basename(__FILE__)) . '/languages/');
 }
 
 
@@ -141,11 +146,8 @@ if ( get_option( 'enable-reply-tool' ) == true ) {
 	//Enqueue necessary scripts and styles
 	add_action( 'wp_enqueue_scripts', 'decode_reply_tool_enqueue_scripts' );
 	function decode_reply_tool_enqueue_scripts() {
-			wp_register_script( 'decode-reply-tool-script', plugins_url('decode-reply-tool-script.js', __FILE__), array('jquery'), '1.0.2', true );
-			wp_register_style( 'decode-reply-tool-style', plugins_url('decode-reply-tool-style.css', __FILE__), array(), '1.0.2');
-
-			wp_enqueue_script( 'decode-reply-tool-script' );
-			wp_enqueue_style( 'decode-reply-tool-style' );
+			wp_enqueue_script( 'decode-reply-tool-script', plugins_url('decode-reply-tool-script.js', __FILE__), array('jquery'), '1.0.2', true );
+			wp_enqueue_style( 'decode-reply-tool-style', plugins_url('decode-reply-tool-style.css', __FILE__), array(), '1.0.2' );
 	}
 }
 ?>
