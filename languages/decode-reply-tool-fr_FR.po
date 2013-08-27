@@ -1,0 +1,102 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Decode Reply Tool v1.1.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2013-08-26 10:23:09+0000\n"
+"Last-Translator: Stéphane﻿ Bataillon <sbataillon@yahoo.fr>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n>1;\n"
+"X-Generator: CSL v1.x\n"
+"X-Poedit-Language: French\n"
+"X-Poedit-Country: FRANCE\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;\n"
+"X-Poedit-Basepath: ../\n"
+"X-Poedit-Bookmarks: \n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Textdomain-Support: yes"
+
+#: reply-tool-insert.php:3
+#@ decode-reply-tool
+msgid "With Twitter"
+msgstr "Avec Twitter"
+
+#: reply-tool-insert.php:5
+#@ decode-reply-tool
+msgid "Reply"
+msgstr "Répondre"
+
+#: reply-tool-insert.php:7
+#@ decode-reply-tool
+msgid "With ADN"
+msgstr "Avec ADN"
+
+#: reply-tool-loader.php:28
+#@ decode-reply-tool
+msgid "Decode Reply Tool"
+msgstr "Decode Reply Tool"
+
+#: reply-tool-loader.php:41
+#@ decode-reply-tool
+msgid "Enable/Disable"
+msgstr "Activer/Désactiver"
+
+#: reply-tool-loader.php:42
+#@ decode-reply-tool
+msgid "Display"
+msgstr "Position"
+
+#: reply-tool-loader.php:43
+#@ decode-reply-tool
+msgid "Usernames"
+msgstr "Noms d'utilisateurs"
+
+#: reply-tool-loader.php:46
+#@ decode-reply-tool
+msgid "Enable Reply Tool"
+msgstr "Activer Reply Tool"
+
+#: reply-tool-loader.php:47
+#@ decode-reply-tool
+msgid "Display Above Posts"
+msgstr "Placer avant les articles"
+
+#: reply-tool-loader.php:48
+#@ decode-reply-tool
+msgid "Display Below Posts"
+msgstr "Placer après les articles"
+
+#: reply-tool-loader.php:49
+#@ decode-reply-tool
+msgid "Twitter Username"
+msgstr "Nom d'utilisateur Twitter"
+
+#: reply-tool-loader.php:50
+#@ decode-reply-tool
+msgid "App.net Username"
+msgstr "Nom d'utilisateur App.net"
+
+#: reply-tool-loader.php:54
+#@ decode-reply-tool
+msgid "Do you want to enable or disable the reply tool on your site?"
+msgstr "Voulez-vous activer ou désactiver l'outil de réponse sur votre site ?"
+
+#: reply-tool-loader.php:58
+#@ decode-reply-tool
+msgid "Choose how the reply tool is displayed on your site:"
+msgstr "Choisissez où placer l'outil de réponse sur votre site:"
+
+#: reply-tool-loader.php:62
+#@ decode-reply-tool
+msgid "Enter the usernames you want to be @mentioned to for replies:"
+msgstr "Entrez les noms d'utilisateurs qui apparaitront dans les réponses:"
+
+#: reply-tool-loader.php:95
+#@ decode-reply-tool
+msgid "Decode Reply Tool Options"
+msgstr "Options de Decode Reply Tool"
+
