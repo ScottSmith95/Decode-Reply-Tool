@@ -1,0 +1,85 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Decode Reply Tool v1.1.4\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-08-24\n"
+"PO-Revision-Date: 2013-09-01 13:27-0600\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n>1;\n"
+"X-Generator: Poedit 1.5.7\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;"
+"_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2\n"
+"X-Poedit-Basepath: ../\n"
+"X-Textdomain-Support: yes\n"
+"Language: fr_FR\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: reply-tool-loader.php:28
+msgid "Decode Reply Tool"
+msgstr "Decode Antwort-Tool"
+
+#: reply-tool-loader.php:41
+msgid "Enable/Disable"
+msgstr "Aktivieren/Deaktivieren"
+
+#: reply-tool-loader.php:42
+msgid "Display"
+msgstr "Anzeige"
+
+#: reply-tool-loader.php:43
+msgid "Usernames"
+msgstr "Benutzernamen"
+
+#: reply-tool-loader.php:46
+msgid "Enable Reply Tool"
+msgstr "Antwort-Tool aktivieren"
+
+#: reply-tool-loader.php:47
+msgid "Display Above Posts"
+msgstr "Oberhalb der Posts anzeigen"
+
+#: reply-tool-loader.php:48
+msgid "Display Below Posts"
+msgstr "Unterhalb der Posts anzeigen"
+
+#: reply-tool-loader.php:49
+msgid "Twitter Username"
+msgstr "Twitter Benutzername"
+
+#: reply-tool-loader.php:50
+msgid "App.net Username"
+msgstr "App.net Benutzername"
+
+#: reply-tool-loader.php:54
+msgid "Do you want to enable or disable the reply tool on your site?"
+msgstr ""
+"Willst du das Antwort-Tool auf deiner Seite aktivieren oder deaktivieren?"
+
+#: reply-tool-loader.php:58
+msgid "Choose how the reply tool is displayed on your site:"
+msgstr "W&auml:hle wie das Antwort-Tool auf deiner Seite angezeigt wird:"
+
+#: reply-tool-loader.php:62
+msgid "Enter the usernames you want to be @mentioned to for replies:"
+msgstr "Gib die Benutzernamen ein, welche bei Antworten erwähnt werden sollen:"
+
+#: reply-tool-loader.php:95
+msgid "Decode Reply Tool Options"
+msgstr "Decode Antwort-Tool Einstellungen"
+
+#: reply-tool-insert.php:3
+msgid "With Twitter"
+msgstr "Mit Twitter"
+
+#: reply-tool-insert.php:5
+msgid "Reply"
+msgstr "Antworten"
+
+#: reply-tool-insert.php:7
+msgid "With ADN"
+msgstr "Mit ADN"
