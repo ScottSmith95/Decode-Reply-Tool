@@ -119,7 +119,7 @@ if ( get_option( 'enable-reply-tool' ) == true ) {
 		include 'reply-tool-insert.php';
 		$reply_tool = ob_get_clean();
 
-		if( is_home() && is_main_query() && !has_post_format('quote') && !has_post_format('aside') || is_single() && is_main_query() && !has_post_format('quote') && !has_post_format('aside') ) {
+		if( is_home() && is_main_query() && !has_post_format('quote') && !has_post_format('aside') && !is_attachment() || is_single() && is_main_query() && !has_post_format('quote') && !has_post_format('aside') && !is_attachment() ) {
 			if( get_option( 'display-above-posts', true ) == true ) {
 				$content = $reply_tool . $content;
 			}
@@ -130,7 +130,7 @@ if ( get_option( 'enable-reply-tool' ) == true ) {
 		elseif( has_post_format('quote') && is_home() && is_main_query() || has_post_format('aside') && is_home() && is_main_query() || has_excerpt() ) {
 			$content = $content;
 		}
-		elseif( has_post_format('quote') && is_single() || has_post_format('aside') && is_single() ) {
+		elseif( has_post_format('quote') && is_single() || has_post_format('aside') && is_single() || is_attachment() ) {
 			$content = $content . $reply_tool;
 		}
 		return $content;
