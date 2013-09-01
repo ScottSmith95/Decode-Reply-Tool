@@ -67,3 +67,9 @@
 .format-quote .decode-reply-tool-plugin {
 	font-size: 0.5em;
 }
+
+@media only print {
+.decode-reply-tool-plugin {
+	display: none;
+}
+}
