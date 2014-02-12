@@ -1,5 +1,5 @@
 [].forEach.call( document.querySelectorAll(".replytrigger"), function(element) {
-	element.addEventListener('click', function(event) {
+	element.addEventListener('click', function() {
 		
 		if ( document.querySelector('.triggered') ) {
 			document.querySelector('.triggered').classList.remove('triggered');
