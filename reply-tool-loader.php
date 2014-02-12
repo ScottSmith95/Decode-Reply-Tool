@@ -23,13 +23,12 @@ License: GPL3
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-add_action( 'admin_menu', 'decode_reply_tool_options' );
 function decode_reply_tool_options() {
     add_theme_page( __( 'Decode Reply Tool', 'decode-reply-tool' ), __( 'Decode Reply Tool', 'decode-reply-tool' ), 'manage_options', 'decode_reply_tool', 'decode_reply_tool_options_page' );
 }
+add_action( 'admin_menu', 'decode_reply_tool_options' );
 
 
-add_action( 'admin_init', 'decode_reply_tool_init' );
 function decode_reply_tool_init() {
 	register_setting( 'decode-reply-tool-settings-group', 'enable-reply-tool' );
 	register_setting( 'decode-reply-tool-settings-group', 'display-above-posts' );
@@ -49,6 +48,7 @@ function decode_reply_tool_init() {
 	add_settings_field( 'twitter-username', __( 'Twitter Username', 'decode-reply-tool' ), 'decode_reply_tool_twitter_username_callback', 'decode_reply_tool', 'usernames-section' );
 	add_settings_field( 'adn-username', __( 'App.net Username', 'decode-reply-tool' ), 'decode_reply_tool_adn_username_callback', 'decode_reply_tool', 'usernames-section' );
 }
+add_action( 'admin_init', 'decode_reply_tool_init' );
 
 function decode_reply_tool_enable_section_callback() {
     echo __( 'Do you want to enable or disable the reply tool on your site?', 'decode-reply-tool' );
@@ -102,17 +102,15 @@ function decode_reply_tool_options_page() {
     <?php
 }
 
-add_action( 'init', 'decode_reply_tool_setup' );
 function decode_reply_tool_setup() {
     load_plugin_textdomain('decode-reply-tool', false, dirname(plugin_basename(__FILE__)) . '/languages/');
 }
+add_action( 'init', 'decode_reply_tool_setup' );
 
 
 if ( get_option( 'enable-reply-tool' ) == true ) {
 	
 	//Add Reply Tool to post content
-	add_filter( 'the_content', 'insert_decode_reply_tool' );
-	remove_filter( 'the_excerpt', 'insert_decode_reply_tool' );
 	function insert_decode_reply_tool( $content ) {
 
 		ob_start();
@@ -135,19 +133,20 @@ if ( get_option( 'enable-reply-tool' ) == true ) {
 		}
 		return $content;
 	}
-	add_filter('get_the_excerpt', 'remove_decode_reply_tool', 5);
+	add_filter( 'the_content', 'insert_decode_reply_tool' );
 
 	//Remove Reply Tool text from post excerpts
 	function remove_decode_reply_tool( $content ){
 	   remove_filter('the_content', 'insert_decode_reply_tool');
 	   return $content;
 	}
+	add_filter('get_the_excerpt', 'remove_decode_reply_tool', 5);
 
 	//Enqueue necessary scripts and styles
-	add_action( 'wp_enqueue_scripts', 'decode_reply_tool_enqueue_scripts' );
 	function decode_reply_tool_enqueue_scripts() {
 			wp_enqueue_script( 'decode-reply-tool-script', plugins_url('decode-reply-tool-script.js', __FILE__), array(), '1.1.4', true );
 			wp_enqueue_style( 'decode-reply-tool-style', plugins_url('decode-reply-tool-style.css', __FILE__), array(), '1.0.2' );
 	}
+	add_action( 'wp_enqueue_scripts', 'decode_reply_tool_enqueue_scripts' );
 }
 ?>
