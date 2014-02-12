@@ -4,7 +4,7 @@ Donate link:
 Tags: reply, Decode, discussion, social, twitter, app.net, adn, simple, minimal
 Requires at least: 2.7
 Tested up to: 3.8.1
-Stable tag: 1.1.4
+Stable tag: 1.1.5
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0-standalone.html
 
@@ -38,6 +38,9 @@ Not at all! Decode is as simple as can be; you never need to look at a bit of co
 2. The Reply Tool after being activated by drawing the cursor near or tapping on the "Reply" text.
 
 == Changelog ==
+
+= 1.1.5 =
+* Reduced number of PHP calls
 
 = 1.1.4 =
 * Reply Tool now doesn't need jQuery
