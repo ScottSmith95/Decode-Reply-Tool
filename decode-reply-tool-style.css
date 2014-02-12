@@ -46,7 +46,7 @@
 	opacity: 1;
 }
 
-.decode-reply-tool-plugin .replylink, .decode-reply-tool-plugin .replytrigger {
+body .decode-reply-tool-plugin a.replylink, .decode-reply-tool-plugin .replytrigger {
 	-webkit-transition: color 0.25s ease-out, opacity 0.25s ease-in-out, padding 0.35s ease-out;
 	-moz-transition: color 0.25s ease-out, opacity 0.25s ease-in-out, padding 0.35s ease-out;
 	transition: color 0.25s ease-out, opacity 0.25s ease-in-out, padding 0.35s ease-out;
