@@ -3,10 +3,10 @@
 Plugin Name: Decode Reply Tool
 Plugin URI: http://ScottHSmith.com/projects/decode
 Description: The perfect compliment to the Decode theme, this plugin allows your readership to reply to your posts via Twitter and App.net using a beautiful, simple reply tool placed on above or below your posts.
-Version: 1.1.6
+Version: 1.1.7
 Author: Scott Smith
 Author URI: http://ScottHSmith.com/
-License: GPL3
+License: GPLv3
 */
 
 /*  This program is free software: you can redistribute it and/or modify

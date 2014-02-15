@@ -4,7 +4,7 @@ Donate link:
 Tags: reply, Decode, discussion, social, twitter, app.net, adn, simple, minimal
 Requires at least: 2.7
 Tested up to: 3.8.1
-Stable tag: 1.1.6
+Stable tag: 1.1.7
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0-standalone.html
 
@@ -39,6 +39,10 @@ Not at all! Decode is as simple as can be; you never need to look at a bit of co
 
 == Changelog ==
 
+= 1.1.7 =
+* Updated translation template
+* Shortened style and script filenames
+
 = 1.1.6 =
 * Fixed version numbers
 * Improved ADN sharing text
@@ -62,11 +66,3 @@ Not at all! Decode is as simple as can be; you never need to look at a bit of co
 
 = 1.1 =
 * Added options to display reply tool above or below posts. (Quotes and asides are excluded, those display at bottom anyway)
-
-= 1.0.3 =
-* Removed Reply Tool text from post excerpts
-
-= 1.0.2 =
-* New, cool transition on activation
-* Improved spacing with post
-* Works better with Decode 2.5 and up
