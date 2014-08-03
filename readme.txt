@@ -4,7 +4,7 @@ Donate link:
 Tags: reply, Decode, discussion, social, twitter, app.net, adn, simple, minimal
 Requires at least: 2.7
 Tested up to: 3.8.1
-Stable tag: 1.1.7
+Stable tag: 1.1.8
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0-standalone.html
 
@@ -41,6 +41,7 @@ Not at all! Decode is as simple as can be; you never need to look at a bit of co
 
 = 1.1.8 =
 * Sped up page rendering by inlining styles
+* Fixes 301 redirect on ADN reply links
 
 = 1.1.7 =
 * Updated translation template
