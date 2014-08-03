@@ -110,7 +110,7 @@ add_action( 'init', 'decode_reply_tool_setup' );
 
 if ( get_option( 'enable-reply-tool' ) == true ) {
 	
-	//Add Reply Tool to post content
+	// Add Reply Tool to post content.
 	function insert_decode_reply_tool( $content ) {
 
 		ob_start();
@@ -135,14 +135,14 @@ if ( get_option( 'enable-reply-tool' ) == true ) {
 	}
 	add_filter( 'the_content', 'insert_decode_reply_tool' );
 
-	//Remove Reply Tool text from post excerpts
+	// Remove Reply Tool text from post excerpts.
 	function remove_decode_reply_tool( $content ){
 	   remove_filter('the_content', 'insert_decode_reply_tool');
 	   return $content;
 	}
 	add_filter('get_the_excerpt', 'remove_decode_reply_tool', 5);
 
-	//Add styles to <head>
+	// Add styles to <head>.
 	function decode_reply_tool_custom_css() {
 		?>
 			<!-- Decode Reply Tool CSS -->
@@ -221,7 +221,7 @@ if ( get_option( 'enable-reply-tool' ) == true ) {
 	}
 	add_action( 'wp_head', 'decode_reply_tool_custom_css', 11 );
 	
-	//Enqueue script
+	// Enqueue script.
 	function decode_reply_tool_enqueue_scripts() {
 			wp_enqueue_script( 'decode-reply-tool-script', plugins_url('decode-reply-tool.js', __FILE__), array(), '1.1.4', true );
 	}
