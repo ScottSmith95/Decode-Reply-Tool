@@ -39,6 +39,9 @@ Not at all! Decode is as simple as can be; you never need to look at a bit of co
 
 == Changelog ==
 
+= 1.1.8 =
+* Sped up page rendering by inlining styles
+
 = 1.1.7 =
 * Updated translation template
 * Shortened style and script filenames

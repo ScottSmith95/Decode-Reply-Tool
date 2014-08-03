@@ -3,7 +3,7 @@
 Plugin Name: Decode Reply Tool
 Plugin URI: http://ScottHSmith.com/projects/decode
 Description: The perfect compliment to the Decode theme, this plugin allows your readership to reply to your posts via Twitter and App.net using a beautiful, simple reply tool placed on above or below your posts.
-Version: 1.1.7
+Version: 1.1.8
 Author: Scott Smith
 Author URI: http://ScottHSmith.com/
 License: GPLv3
@@ -142,10 +142,88 @@ if ( get_option( 'enable-reply-tool' ) == true ) {
 	}
 	add_filter('get_the_excerpt', 'remove_decode_reply_tool', 5);
 
-	//Enqueue necessary scripts and styles
+	//Add styles to <head>
+	function decode_reply_tool_custom_css() {
+		?>
+			<!-- Decode Reply Tool CSS -->
+			<style type="text/css">
+				/* =Reply Tool Style
+				----------------------------------------------- */
+				
+				.decode-reply-tool-plugin {
+					-webkit-transition: width 0.25s ease-out;
+					-moz-transition: width 0.25s ease-out;
+					transition: width 0.25s ease-out;
+					border-bottom: none;
+					position: relative;
+					right: 5px;
+					text-align: center;
+					width: 100%;
+					z-index: 1;
+				}
+				
+				.decode-reply-tool-plugin:first-child {
+					margin: -2.5% auto 3.5%;
+				}
+				
+				.decode-reply-tool-plugin:last-child {
+					margin: 3.5% auto;
+				}
+				
+				.decode-reply-tool-plugin .replytrigger {
+					width: auto;
+					float: none;
+					padding: 0 3.5%;
+				}
+				
+				.decode-reply-tool-plugin:hover .replytrigger, .decode-reply-tool-plugin.triggered .replytrigger {
+					opacity: 0;
+					padding: 0;
+				}
+				
+				.decode-reply-tool-plugin .replylink {
+					opacity: 0;
+				}
+				
+				.decode-reply-tool-plugin:hover .replylink, .decode-reply-tool-plugin.triggered .replylink {
+					opacity: 1;
+				}
+				
+				body .decode-reply-tool-plugin a.replylink, .decode-reply-tool-plugin .replytrigger {
+					-webkit-transition: color 0.25s ease-out, opacity 0.25s ease-in-out, padding 0.35s ease-out;
+					-moz-transition: color 0.25s ease-out, opacity 0.25s ease-in-out, padding 0.35s ease-out;
+					transition: color 0.25s ease-out, opacity 0.25s ease-in-out, padding 0.35s ease-out;
+					font-size: 1em;
+					color: #444444;
+					display: inline-block;
+				}
+					.decode-reply-tool-plugin .replylink:hover {
+						color: #009BCD;
+						border-bottom: none !important;
+					}
+				
+					.decode-reply-tool-plugin .replylink:active {
+						color: #007EA6;
+						border-bottom: none !important;
+					}
+				
+				.format-quote .decode-reply-tool-plugin {
+					font-size: 0.5em;
+				}
+				
+				@media only print {
+				.decode-reply-tool-plugin {
+					display: none;
+				}
+				}
+			</style>
+		<?php
+	}
+	add_action( 'wp_head', 'decode_reply_tool_custom_css', 11 );
+	
+	//Enqueue script
 	function decode_reply_tool_enqueue_scripts() {
 			wp_enqueue_script( 'decode-reply-tool-script', plugins_url('decode-reply-tool.js', __FILE__), array(), '1.1.4', true );
-			wp_enqueue_style( 'decode-reply-tool-style', plugins_url('decode-reply-tool.css', __FILE__), array(), '1.0.2' );
 	}
 	add_action( 'wp_enqueue_scripts', 'decode_reply_tool_enqueue_scripts' );
 }

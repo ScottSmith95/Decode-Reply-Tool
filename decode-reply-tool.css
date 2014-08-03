@@ -28,21 +28,15 @@
 }
 
 .decode-reply-tool-plugin:hover .replytrigger, .decode-reply-tool-plugin.triggered .replytrigger {
-	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-	filter: alpha(opacity=0);
 	opacity: 0;
 	padding: 0;
 }
 
 .decode-reply-tool-plugin .replylink {
-	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-	filter: alpha(opacity=0);
 	opacity: 0;
 }
 
 .decode-reply-tool-plugin:hover .replylink, .decode-reply-tool-plugin.triggered .replylink {
-	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
-	filter: alpha(opacity=100);
 	opacity: 1;
 }
 
