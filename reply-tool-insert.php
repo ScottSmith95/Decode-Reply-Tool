@@ -5,7 +5,5 @@
 	<div class="replytrigger"><?php _e( 'Reply', 'decode-reply-tool' ); ?></div>
 
 	<a href="<?php echo esc_url( 'https://account.app.net/intent/post?text=@' . get_option( 'adn-username' ) . '%20(about%3A%20' . get_permalink() . ')%20' ); ?>" class="adnreply replylink right" target="_blank"><?php _e( 'With ADN', 'decode-reply-tool' ); ?></a>
-	
-	<a href="<?php echo esc_url( 'https://account.app.net/intent/post?text=@' . get_option( 'adn-username' ) . '%20(about%3A%20' . get_permalink() . ')%20' ); ?>" class="adnreply replylink right" target="_blank"><?php _e( 'With ADN', 'decode-reply-tool' ); ?></a>
 
 </div>

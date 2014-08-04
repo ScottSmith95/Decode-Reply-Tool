@@ -147,75 +147,74 @@ if ( get_option( 'enable-reply-tool' ) == true ) {
 		?>
 			<!-- Decode Reply Tool CSS -->
 			<style type="text/css">
-				/* =Reply Tool Style
-				----------------------------------------------- */
-				
-				.decode-reply-tool-plugin {
-					-webkit-transition: width 0.25s ease-out;
-					-moz-transition: width 0.25s ease-out;
-					transition: width 0.25s ease-out;
-					border-bottom: none;
-					position: relative;
-					right: 5px;
-					text-align: center;
-					width: 100%;
-					z-index: 1;
+			/* =Reply Tool Style
+			----------------------------------------------- */
+			
+			.decode-reply-tool-plugin {
+				-webkit-transition: width 0.25s ease-out;
+				-moz-transition: width 0.25s ease-out;
+				transition: width 0.25s ease-out;
+				border-bottom: none;
+				position: relative;
+				right: 5px;
+				text-align: center;
+				width: 100%;
+				z-index: 1;
+			}
+			
+			/* When Reply Tool is on the top of a post */
+			.decode-reply-tool-plugin:first-child {
+				margin: -2.5% auto 3.5%;
+			}
+			
+			/* When Reply Tool is on the bottom of a post */
+			.decode-reply-tool-plugin:last-child {
+				margin: 3.5% auto;
+			}
+			
+			.decode-reply-tool-plugin .replylink, .decode-reply-tool-plugin .replytrigger {
+				-webkit-transition: color 0.25s ease-out, opacity 0.25s ease-in-out, padding 0.35s ease-out;
+				-moz-transition: color 0.25s ease-out, opacity 0.25s ease-in-out, padding 0.35s ease-out;
+				transition: color 0.25s ease-out, opacity 0.25s ease-in-out, padding 0.35s ease-out;
+				font-size: 1em;
+				color: #444444;
+				display: inline-block;
+			}
+			
+			.decode-reply-tool-plugin .replytrigger {
+				width: auto;
+				float: none;
+				padding: 0 3.5%;
+			}
+			
+			.decode-reply-tool-plugin:hover .replytrigger, .decode-reply-tool-plugin.triggered .replytrigger {
+				opacity: 0;
+				padding: 0;
+			}
+			
+			.decode-reply-tool-plugin .replylink {
+				opacity: 0;
+			}
+			
+			.decode-reply-tool-plugin:hover .replylink, .decode-reply-tool-plugin.triggered .replylink {
+				opacity: 1;
+			}
+			
+				.decode-reply-tool-plugin .replylink:hover {
+					color: #009BCD;
+					border-bottom: none !important;
 				}
-				
-				.decode-reply-tool-plugin:first-child {
-					margin: -2.5% auto 3.5%;
+			
+				.decode-reply-tool-plugin .replylink:active {
+					color: #007EA6;
+					border-bottom: none !important;
 				}
-				
-				.decode-reply-tool-plugin:last-child {
-					margin: 3.5% auto;
-				}
-				
-				.decode-reply-tool-plugin .replytrigger {
-					width: auto;
-					float: none;
-					padding: 0 3.5%;
-				}
-				
-				.decode-reply-tool-plugin:hover .replytrigger, .decode-reply-tool-plugin.triggered .replytrigger {
-					opacity: 0;
-					padding: 0;
-				}
-				
-				.decode-reply-tool-plugin .replylink {
-					opacity: 0;
-				}
-				
-				.decode-reply-tool-plugin:hover .replylink, .decode-reply-tool-plugin.triggered .replylink {
-					opacity: 1;
-				}
-				
-				body .decode-reply-tool-plugin a.replylink, .decode-reply-tool-plugin .replytrigger {
-					-webkit-transition: color 0.25s ease-out, opacity 0.25s ease-in-out, padding 0.35s ease-out;
-					-moz-transition: color 0.25s ease-out, opacity 0.25s ease-in-out, padding 0.35s ease-out;
-					transition: color 0.25s ease-out, opacity 0.25s ease-in-out, padding 0.35s ease-out;
-					font-size: 1em;
-					color: #444444;
-					display: inline-block;
-				}
-					.decode-reply-tool-plugin .replylink:hover {
-						color: #009BCD;
-						border-bottom: none !important;
-					}
-				
-					.decode-reply-tool-plugin .replylink:active {
-						color: #007EA6;
-						border-bottom: none !important;
-					}
-				
-				.format-quote .decode-reply-tool-plugin {
-					font-size: 0.5em;
-				}
-				
-				@media only print {
-				.decode-reply-tool-plugin {
-					display: none;
-				}
-				}
+			
+			@media only print {
+			.decode-reply-tool-plugin {
+				display: none;
+			}
+			}
 			</style>
 		<?php
 	}

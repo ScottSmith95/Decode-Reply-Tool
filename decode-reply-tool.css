@@ -13,12 +13,23 @@
 	z-index: 1;
 }
 
+/* When Reply Tool is on the top of a post */
 .decode-reply-tool-plugin:first-child {
 	margin: -2.5% auto 3.5%;
 }
 
+/* When Reply Tool is on the bottom of a post */
 .decode-reply-tool-plugin:last-child {
 	margin: 3.5% auto;
+}
+
+.decode-reply-tool-plugin .replylink, .decode-reply-tool-plugin .replytrigger {
+	-webkit-transition: color 0.25s ease-out, opacity 0.25s ease-in-out, padding 0.35s ease-out;
+	-moz-transition: color 0.25s ease-out, opacity 0.25s ease-in-out, padding 0.35s ease-out;
+	transition: color 0.25s ease-out, opacity 0.25s ease-in-out, padding 0.35s ease-out;
+	font-size: 1em;
+	color: #444444;
+	display: inline-block;
 }
 
 .decode-reply-tool-plugin .replytrigger {
@@ -40,14 +51,6 @@
 	opacity: 1;
 }
 
-body .decode-reply-tool-plugin a.replylink, .decode-reply-tool-plugin .replytrigger {
-	-webkit-transition: color 0.25s ease-out, opacity 0.25s ease-in-out, padding 0.35s ease-out;
-	-moz-transition: color 0.25s ease-out, opacity 0.25s ease-in-out, padding 0.35s ease-out;
-	transition: color 0.25s ease-out, opacity 0.25s ease-in-out, padding 0.35s ease-out;
-	font-size: 1em;
-	color: #444444;
-	display: inline-block;
-}
 	.decode-reply-tool-plugin .replylink:hover {
 		color: #009BCD;
 		border-bottom: none !important;
@@ -57,10 +60,6 @@ body .decode-reply-tool-plugin a.replylink, .decode-reply-tool-plugin .replytrig
 		color: #007EA6;
 		border-bottom: none !important;
 	}
-
-.format-quote .decode-reply-tool-plugin {
-	font-size: 0.5em;
-}
 
 @media only print {
 .decode-reply-tool-plugin {
