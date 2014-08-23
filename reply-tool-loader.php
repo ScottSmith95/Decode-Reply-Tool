@@ -103,7 +103,7 @@ function decode_reply_tool_options_page() {
 }
 
 function decode_reply_tool_setup() {
-    load_plugin_textdomain('decode-reply-tool', false, dirname(plugin_basename(__FILE__)) . '/languages/');
+    load_plugin_textdomain( 'decode-reply-tool', false, dirname( plugin_basename(__FILE__) ) . '/languages/' );
 }
 add_action( 'init', 'decode_reply_tool_setup' );
 
