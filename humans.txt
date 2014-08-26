@@ -1,0 +1,7 @@
+/* Author */
+	Name:    Scott Smith
+	Email: mail@ScottHSmith.com
+	URI:     http://ScottHSmith.com
+	Twitter: @ScottSmith95
+
+/* Translation Credits */
