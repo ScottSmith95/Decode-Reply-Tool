@@ -218,7 +218,7 @@ if ( get_option( 'enable-reply-tool' ) == true ) {
 			</style>
 		<?php
 	}
-	add_action( 'wp_head', 'decode_reply_tool_custom_css', 11 );
+	add_action( 'wp_head', 'decode_reply_tool_custom_css' );
 	
 	// Enqueue script.
 	function decode_reply_tool_enqueue_scripts() {
