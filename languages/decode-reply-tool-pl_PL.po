@@ -1,0 +1,102 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Decode Reply Tool  1.1.9\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/support/theme/decode\n"
+"POT-Creation-Date: 2014-08-02 23:39-0600\n"
+"PO-Revision-Date: 2014-11-06 13:36-0800\n"
+"Last-Translator: Scott Smith <mail@ScottHSmith.com>\n"
+"Language-Team: Michał Maciejewski <admin@echidna-computers.pl>\n"
+"Language: pl_PL\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2);\n"
+"X-Generator: Poedit 1.6.10\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;"
+"_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2\n"
+"X-Poedit-Basepath: ../\n"
+"X-Textdomain-Support: yes\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPath-1: ..\n"
+
+# @ decode-reply-tool
+#: ../reply-tool-insert.php:3
+msgid "With Twitter"
+msgstr "przez Twitter"
+
+# @ decode-reply-tool
+#: ../reply-tool-insert.php:5
+msgid "Reply"
+msgstr "Odpowiedz"
+
+# @ decode-reply-tool
+#: ../reply-tool-insert.php:7
+msgid "With ADN"
+msgstr "przez ADN"
+
+# @ decode-reply-tool
+#: ../reply-tool-loader.php:27
+msgid "Decode Reply Tool"
+msgstr "Odpowiadacz Decode"
+
+# @ decode-reply-tool
+#: ../reply-tool-loader.php:40
+msgid "Enable/Disable"
+msgstr "Włącz/wyłącz"
+
+# @ decode-reply-tool
+#: ../reply-tool-loader.php:41
+msgid "Display"
+msgstr "Wyświetlanie"
+
+# @ decode-reply-tool
+#: ../reply-tool-loader.php:42
+msgid "Usernames"
+msgstr "Nazwy użytkownika"
+
+# @ decode-reply-tool
+#: ../reply-tool-loader.php:45
+msgid "Enable Reply Tool"
+msgstr "Włącz Odpowiadacza"
+
+# @ decode-reply-tool
+#: ../reply-tool-loader.php:46
+msgid "Display Above Posts"
+msgstr "Wyświetl nad wpisem"
+
+# @ decode-reply-tool
+#: ../reply-tool-loader.php:47
+msgid "Display Below Posts"
+msgstr "Wyświetl pod wpisem"
+
+# @ decode-reply-tool
+#: ../reply-tool-loader.php:48
+msgid "Twitter Username"
+msgstr "Nazwa na Twitterze"
+
+# @ decode-reply-tool
+#: ../reply-tool-loader.php:49
+msgid "App.net Username"
+msgstr "Nazwa w App.net"
+
+# @ decode-reply-tool
+#: ../reply-tool-loader.php:54
+msgid "Do you want to enable or disable the reply tool on your site?"
+msgstr "Chcesz włączyć lub wyłączyć Odpowiadacza w swojej witrynie?"
+
+# @ decode-reply-tool
+#: ../reply-tool-loader.php:58
+msgid "Choose how the reply tool is displayed on your site:"
+msgstr "Wybierz miejsce wyświetlania Odpowiadacza na stronie:"
+
+# @ decode-reply-tool
+#: ../reply-tool-loader.php:62
+msgid "Enter the usernames you want to be @mentioned to for replies:"
+msgstr "Wprowadź nazwy użytkownika, które będą używane w odpowiedziach:"
+
+# @ decode-reply-tool
+#: ../reply-tool-loader.php:95
+msgid "Decode Reply Tool Options"
+msgstr "Odpowiadacz Decode - opcje"

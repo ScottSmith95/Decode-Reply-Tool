@@ -5,3 +5,5 @@
 	Twitter: @ScottSmith95
 
 /* Translation Credits */
+	Polish Translation: Michał Maciejewski
+	Email:              admin@echidna-computers.pl
